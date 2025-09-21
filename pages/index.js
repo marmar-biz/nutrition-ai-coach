@@ -1,10 +1,10 @@
 export default function Home() {
   return (
-    <main style={{maxWidth:720,margin:"40px auto",padding:"0 16px",fontFamily:"system-ui, Arial"}}>
-      <h1>AI Nutrition Coach</h1>
-      <p>نسخه‌ی اولیه‌ی وب‌اپ شما با Next.js بالا آمد ✅</p>
-      <p>گام بعد: ساخت یک API ساده برای تست سرور.</p>
-      <a href="/api/hello">تست API</a>
+    <main style={{ maxWidth: 720, margin: "0 auto", padding: "2rem" }}>
+      <h1>🍏 AI Nutrition Coach</h1>
+      <p>به مربی هوشمند تغذیه خوش اومدی! 🥗</p>
+      <p>اینجا می‌تونی رژیم غذایی، کالری و برنامه شخصی دریافت کنی.</p>
+      <a href="/api/hello">بزن بریم 👉 تست API</a>
     </main>
   );
 }
