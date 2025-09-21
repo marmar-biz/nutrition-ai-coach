@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Nav() {
   return (
     <nav>
       <ul>
@@ -13,13 +13,15 @@ export default function Navbar() {
       </ul>
       <style jsx>{`
         nav {
-          background: #f0f0f0;
-          padding: 10px;
+          background: #f5f5f5;
+          padding: 10px 20px;
         }
         ul {
           list-style: none;
           display: flex;
-          gap: 15px;
+          gap: 20px;
+          margin: 0;
+          padding: 0;
         }
         li {
           font-weight: bold;
@@ -29,7 +31,7 @@ export default function Navbar() {
           color: #333;
         }
         a:hover {
-          color: #0070f3;
+          text-decoration: underline;
         }
       `}</style>
     </nav>
