@@ -2,13 +2,13 @@
 import '../styles/globals.css';
 import Nav from '../components/Nav';
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Nav />
-      <Component {...pageProps} />
+      <div className="container">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
-
-export default MyApp;
