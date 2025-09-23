@@ -1,45 +1,29 @@
 // components/Nav.js
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Nav() {
+  const { pathname } = useRouter();
+  const Item = ({ href, children }) => (
+    <Link href={href} className={`nav-link ${pathname === href ? 'active' : ''}`}>
+      {children}
+    </Link>
+  );
+
   return (
-    <nav>
+    <nav dir="rtl">
       <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/coach">Coach</Link>
-        </li>
+        <li><Item href="/">Home</Item></li>
+        <li><Item href="/about">About</Item></li>
+        <li><Item href="/coach">Coach</Item></li>
+        <li><Item href="/plans">Plans</Item></li>
       </ul>
 
       <style jsx>{`
-        nav {
-          background: #f5f5f5;
-          padding: 10px 20px;
-          border-bottom: 1px solid #ddd;
-        }
-        ul {
-          list-style: none;
-          display: flex;
-          gap: 15px;
-          margin: 0;
-          padding: 0;
-        }
-        li {
-          font-size: 16px;
-        }
-        a {
-          text-decoration: none;
-          color: #333;
-          font-weight: 500;
-        }
-        a:hover {
-          color: #7c3aed; /* بنفش جذاب */
-        }
+        nav{ background:#fff; border-bottom:1px solid #e5e7eb; position:sticky; top:0; z-index:40 }
+        ul{ max-width:1000px; margin:0 auto; padding:12px 16px; display:flex; gap:16px; justify-content:flex-end }
+        .nav-link{ font-weight:700; color:#0f172a; opacity:.75 }
+        .nav-link.active{ color:#7c3aed; opacity:1 }
       `}</style>
     </nav>
   );
