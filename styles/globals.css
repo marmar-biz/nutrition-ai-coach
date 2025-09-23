@@ -1,0 +1,76 @@
+/* styles/globals.css */
+
+/* Theme variables */
+:root {
+  --bg: #f8f9fc;
+  --text: #0f172a;
+  --primary: #6d28d9;   /* Purple */
+  --secondary: #10b981; /* Green highlight */
+  --muted: #64748b;     /* Gray text */
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* لینک‌ها */
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: color .2s ease;
+}
+a:hover { color: var(--secondary); }
+
+/* تیترها */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  margin-bottom: .8rem;
+}
+
+/* متن‌ها */
+p { margin-bottom: 1rem; color: var(--muted); }
+
+/* کارت‌ها */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,.04);
+}
+
+/* دکمه‌ها */
+button, .btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: .7rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .2s ease, transform .06s ease;
+}
+button:hover, .btn:hover { background: var(--secondary); }
+button:active, .btn:active { transform: translateY(1px); }
+
+/* لیست‌ها */
+ul { margin: 1rem 0; padding-inline-start: 1.2rem; }
+li { margin-bottom: .5rem; }
+
+/* کمک‌های ریسپانسیو */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
